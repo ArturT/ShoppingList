@@ -53,3 +53,5 @@ pickle-email-*.html
 
 # Don't ignore .gitkeep
 !.gitkeep
+
+dump.rdb
