@@ -1,6 +1,5 @@
 # ShoppingList
 
-[![Build Status](https://travis-ci.org/ArturT/Railstom.png?branch=master)](https://travis-ci.org/ArturT/Railstom)
 [![Coverage Status](https://coveralls.io/repos/ArturT/ShoppingList/badge.png)](https://coveralls.io/r/ArturT/ShoppingList)
 [![Dependency Status](https://gemnasium.com/ArturT/ShoppingList.png)](https://gemnasium.com/ArturT/ShoppingList)
 [![Code Climate](https://codeclimate.com/github/ArturT/ShoppingList.png)](https://codeclimate.com/github/ArturT/ShoppingList)
