@@ -11,8 +11,6 @@ class User < ActiveRecord::Base
   has_many :authentications, dependent: :destroy
   has_many :lists, dependent: :destroy
 
-  has_many :lists
-
   before_update :update_password_changed
   before_validation :set_preferred_language
 
