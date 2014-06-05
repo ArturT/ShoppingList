@@ -1,5 +1,6 @@
 # ShoppingList
 
+[![Build Status](https://api.shippable.com/projects/5390fd5cd6f7e14100b84a50/badge/master)](https://www.shippable.com/projects/5390fd5cd6f7e14100b84a50)
 [![Coverage Status](https://coveralls.io/repos/ArturT/ShoppingList/badge.png)](https://coveralls.io/r/ArturT/ShoppingList)
 [![Dependency Status](https://gemnasium.com/ArturT/ShoppingList.png)](https://gemnasium.com/ArturT/ShoppingList)
 [![Code Climate](https://codeclimate.com/github/ArturT/ShoppingList.png)](https://codeclimate.com/github/ArturT/ShoppingList)
