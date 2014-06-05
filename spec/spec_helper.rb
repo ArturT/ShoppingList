@@ -42,6 +42,20 @@ Spork.prefork do
 
       SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
       SimpleCov.coverage_dir('coverage')
+    elsif ENV['SIMPLECOV_CSV']
+      require 'simplecov-csv'
+      SimpleCov.formatter = SimpleCov::Formatter::CSVFormatter
+      SimpleCov.coverage_dir(ENV['COVERAGE_REPORTS'])
+      SimpleCov.start 'rails' do
+        add_group 'Decorators', 'app/decorators'
+        add_group 'Presenters', 'app/presenters'
+        add_group 'Repositories', 'app/repositories'
+        add_group 'Services', 'app/services'
+        add_group 'Uploaders', 'app/uploaders'
+        add_group 'Validators', 'app/validators'
+        add_group 'Workers', 'app/workers'
+        add_filter 'app/admin'
+      end
     else
       SimpleCov.start
     end

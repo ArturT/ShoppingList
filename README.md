@@ -1,11 +1,11 @@
-# Railstom
+# ShoppingList
 
 [![Build Status](https://travis-ci.org/ArturT/Railstom.png?branch=master)](https://travis-ci.org/ArturT/Railstom)
 [![Coverage Status](https://coveralls.io/repos/ArturT/ShoppingList/badge.png)](https://coveralls.io/r/ArturT/ShoppingList)
 [![Dependency Status](https://gemnasium.com/ArturT/ShoppingList.png)](https://gemnasium.com/ArturT/ShoppingList)
 [![Code Climate](https://codeclimate.com/github/ArturT/ShoppingList.png)](https://codeclimate.com/github/ArturT/ShoppingList)
 
-Rails Custom
+Simple shopping list.
 
 
 
@@ -358,3 +358,10 @@ Sidekiq provides a few options for testing your workers.
 Run a task on a remote server:
 
     $ cap staging do:rake:invoke task=a_certain_task
+
+
+# Continuous Integration
+
+We are using [Shippable.com](https://shippable.com) for Continuous Integration.
+
+Shippable deployment key must be added to `~/.ssh/authorized_keys` on staging/production server. This key must be also added to github deployment keys for `ShoppingList` project.

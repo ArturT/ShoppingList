@@ -1,0 +1,38 @@
+---
+language: ruby
+rvm:
+  - 2.1.2
+bundler_args: --without development
+env:
+  global:
+    - RAILS_ENV=test
+    - DISPLAY=:99.0
+    - CI_REPORTER=1
+    - CI_REPORTS=shippable/testresults
+    - COVERAGE_REPORTS=shippable/codecoverage
+    - SIMPLECOV=1
+    - SIMPLECOV_CSV=1
+services:
+  - redis
+before_install:
+  - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+before_script:
+  - mkdir -p shippable/testresults
+  - cp .rspec.example .rspec
+  - echo '--profile' >> .rspec
+  - cp config/application.yml.example config/application.yml
+  - cp config/database.yml.example config/database.yml
+  - mysql -e 'CREATE DATABASE shoppinglist_test CHARACTER SET utf8 COLLATE utf8_general_ci;'
+  - bundle exec rake db:schema:load
+script:
+  - rake ci:setup:rspecdoc spec
+  - bundle exec rake spec:javascript
+#after_success:
+  #- ./script/ci_deploy.sh
+notifications:
+  email:
+    recipients:
+      - artur.trzop+shoppinglist@lunarlogic.io
+    on_success: change
+    on_failure: always
