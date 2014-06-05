@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 
   has_many :authentications, dependent: :destroy
+  has_many :lists, dependent: :destroy
 
   has_many :lists
 
