@@ -2,7 +2,7 @@
 angular.module('App.directives.railstom', [])
 
 # Your custom modules
-angular.module('App.controllers', [])
+angular.module('App.controllers', ['restangular'])
 angular.module('App.directives', [])
 angular.module('App.factories', [])
 angular.module('App.filters', [])
