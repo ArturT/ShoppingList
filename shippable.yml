@@ -31,8 +31,8 @@ script:
 #after_success:
   #- ./script/ci_deploy.sh
 notifications:
-  email:
-    recipients:
-      - artur.trzop+shoppinglist@lunarlogic.io
-    on_success: change
-    on_failure: always
+  email: false
+    #recipients:
+      #- artur.trzop+shoppinglist@lunarlogic.io
+    #on_success: change
+    #on_failure: always
