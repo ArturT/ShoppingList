@@ -34,6 +34,14 @@ Railstom::Application.routes.draw do
     end
   end
 
+  namespace :api do
+    namespace :internal do
+      resources :lists, only: [:index, :create, :update, :destroy]
+      resources :items, only: [:index, :create, :update, :destroy]
+      resources :list_items, only: [:index, :create, :update, :destroy]
+    end
+  end
+
   require 'constraints/admin'
   constraints Constraint::Admin do
     require 'sidekiq/web'
