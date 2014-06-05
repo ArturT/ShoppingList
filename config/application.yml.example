@@ -26,27 +26,20 @@ CAPISTRANO_DEPLOY_TO: /home/rubyuser/rails_apps/
 # Redis
 REDIS_URL: redis://localhost:6379/0
 
+PROVIDER_FACEBOOK_APP_ID: ID
+PROVIDER_FACEBOOK_APP_SECRET: SECRET_HASH
 
 # Overwrite default variables for specific environment
 development:
   SIDEKIQ_NAMESPACE: railstom:development:sidekiq
 
-  PROVIDER_FACEBOOK_APP_ID: ID
-  PROVIDER_FACEBOOK_APP_SECRET: SECRET_HASH
-
 test:
   SIDEKIQ_NAMESPACE: railstom:test:sidekiq
-
-  PROVIDER_FACEBOOK_APP_ID: ID
-  PROVIDER_FACEBOOK_APP_SECRET: SECRET_HASH
 
 staging:
   HOST: railstom-staging.com
 
   SIDEKIQ_NAMESPACE: railstom:staging:sidekiq
-
-  PROVIDER_FACEBOOK_APP_ID: ID
-  PROVIDER_FACEBOOK_APP_SECRET: SECRET_HASH
 
   MAILER_SENDER: Railstom Staging <notification@railstom-staging.com>
   MAILER_USER_NAME: notification@railstom-staging.com
@@ -57,9 +50,6 @@ production:
   HOST: railstom-production.com
 
   SIDEKIQ_NAMESPACE: railstom:production:sidekiq
-
-  PROVIDER_FACEBOOK_APP_ID: ID
-  PROVIDER_FACEBOOK_APP_SECRET: SECRET_HASH
 
   MAILER_SENDER: Railstom <notification@railstom-production.com>
   MAILER_USER_NAME: notification@railstom-production.com
