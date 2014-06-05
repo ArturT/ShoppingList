@@ -1,7 +1,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: railstom_development
+  database: shoppinglist_development
   username: root
   password:
   host: 127.0.0.1
@@ -13,7 +13,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: railstom_test
+  database: shoppinglist_test
   username: root
   password:
   host: 127.0.0.1
@@ -22,7 +22,7 @@ test:
 staging:
   adapter: mysql2
   encoding: utf8
-  database: railstom_staging
+  database: shoppinglist_staging
   username: root
   password:
   host: 127.0.0.1
@@ -31,7 +31,7 @@ staging:
 production:
   adapter: mysql2
   encoding: utf8
-  database: railstom_production
+  database: shoppinglist_production
   username: root
   password:
   host: 127.0.0.1
