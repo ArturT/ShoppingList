@@ -66,10 +66,12 @@ Will run on system boot. Use redis-cli to manage.
 
 ## Basic
 
-* copy `.ruby-version.example` to `.ruby-version`
-* copy `.rspec.example` to `.rspec` and edit
-* copy `config/database.yml.example` to `config/database.yml` and edit
-* copy `config/application.yml.example` to `config/application.yml` and edit
+Copy and edit files:
+
+* `cp .ruby-version.example .ruby-version`
+* `cp .rspec.example .rspec`
+* `cp config/database.yml.example config/database.yml`
+* `cp config/application.yml.example config/application.yml`
 
 Create databases and run:
 
