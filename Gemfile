@@ -17,6 +17,7 @@ gem 'jquery-rails'
 
 # http://rubydoc.info/gems/jquery-ui-rails/1.0.0/frames
 gem 'jquery-ui-rails'
+gem 'underscore-rails', '~> 1.6.0'
 
 #gem 'jquery_datepicker'
 

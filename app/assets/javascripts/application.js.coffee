@@ -12,6 +12,7 @@
 #
 #= require jquery
 #= require jquery_ujs
+#= require underscore
 #= require foundation
 #= require angular
 #= require angular-resource
