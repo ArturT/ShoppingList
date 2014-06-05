@@ -10,11 +10,17 @@ class Api::Internal::ListsController < ApplicationController
     if list.save
       render json: list
     else
-      render json: { errors: list.errors }
+      render json: { errors: list.errors }, status: 422
     end
   end
 
   def update
+    list = current_user.lists.find(params[:id])
+    if list.update(list_params)
+      render json: list
+    else
+      render json: { errors: list.errors }, status: 422
+    end
   end
 
   def destroy
