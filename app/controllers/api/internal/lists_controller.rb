@@ -1,7 +1,7 @@
 class Api::Internal::ListsController < ApplicationController
   before_action :authenticate_user!
 
-  takes :lists_presenter
+  inject :lists_presenter
 
   def index
     render json: current_user.lists
