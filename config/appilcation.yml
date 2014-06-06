@@ -1,0 +1,68 @@
+# Add application configuration variables here.
+
+SITE_TITLE: ShoppingList
+SITE_YEAR_OF_FOUNDING: 2014
+
+# Use your own secret token/key. Run `rake secret` to get one.
+RAILS_SECRET_TOKEN: 3f792c4f45798c9cfa90f701e629e926f3901eeeff7a5051360660062f5909acb670a9ba3ea536c77359714b18aee92e77574e358bb31d7ca6be3dab8b99d6d4
+DEVISE_SECRET_KEY: 2cedb43098ac63e48f95b107b82bcbef5233df3be40a423a1d4ba51930058c65f3516c15232f58af921dc1707bdd0ccbbb234952711cf5b3b520a8addb613d72
+
+HOST: 127.0.0.1:3000
+MAILER_SENDER: ShoppingList <notification@shoppinglist.weresu.me>
+PROVIDER_FACEBOOK_SCOPE: email
+
+# I18n
+SUPPORTED_LANGUAGES: en pl
+
+# Capistrano
+CAPISTRANO_APP_NAME: shoppinglist # only lower case
+CAPISTRANO_REPOSITORY: git@github.com:ArturT/ShoppingList.git
+CAPISTRANO_RVM_RUBY_STRING: 2.1.2
+CAPISTRANO_USER: rubyuser
+CAPISTRANO_APP_HOST_PRODUCTION: shoppinglist.weresu.me
+CAPISTRANO_APP_HOST_STAGING: shoppinglist-staging.weresu.me
+CAPISTRANO_DEPLOY_TO: /home/rubyuser/rails_apps/
+
+# Redis
+REDIS_URL: redis://localhost:6379/0
+
+PROVIDER_FACEBOOK_APP_ID: 676086755804335
+PROVIDER_FACEBOOK_APP_SECRET: fc00e1567bd331d7136e1483cde6161f
+
+# Overwrite default variables for specific environment
+development:
+  SIDEKIQ_NAMESPACE: shoppinglist:development:sidekiq
+
+test:
+  SIDEKIQ_NAMESPACE: shoppinglist:test:sidekiq
+
+staging:
+  HOST: shoppinglist-staging.weresu.me
+
+  SIDEKIQ_NAMESPACE: shoppinglist:staging:sidekiq
+
+  MAILER_SENDER: ShoppingList Staging <notification@shoppinglist.weresu.me>
+  MAILER_USER_NAME: notification@shoppinglist.weresu.me
+  MAILER_ADDRESS: weresu.me
+  MAILER_PASSWORD: password
+
+production:
+  HOST: shoppinglist.weresu.me
+
+  SIDEKIQ_NAMESPACE: shoppinglist:production:sidekiq
+
+  MAILER_SENDER: ShoppingList <notification@shoppinglist.weresu.me>
+  MAILER_USER_NAME: notification@shoppinglist.weresu.me
+  MAILER_ADDRESS: weresu.me
+  MAILER_PASSWORD: password
+
+  # Use your own google analytics code or please remove this key completely
+  GOOGLE_ANALYTICS_CODE: |
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXXXXXX-X', 'example.com');
+      ga('send', 'pageview');
+    </script>

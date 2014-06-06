@@ -44,32 +44,32 @@ body
 body { background-color: #fff6e6; }
 
 .offset {
-  margin-top: 5em;
-  text-rendering: optimizeLegibility;
+	margin-top: 5em;
+	text-rendering: optimizeLegibility;
 }
 .offset .title
 {
-    font-family: "Lobster Two", "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 3em;
-    color: rgb(134, 222, 216);
-    text-align: center;
+	font-family: "Lobster Two", "Times New Roman", Times, serif;
+	font-weight: 400;
+	font-size: 3em;
+	color: rgb(134, 222, 216);
+	text-align: center;
 }
 .offset .title em
 {
 	font-weight: 100;
-      font-style: normal;
-      font-size: 2.5em;
-      letter-spacing: -0.01em;
-      color: #f77683;
-      text-shadow:
-        -.010em .010em #fff6e6,
-        -.040em .040em #e7dcd7;
+	font-style: normal;
+	font-size: 2.5em;
+	letter-spacing: -0.01em;
+	color: #f77683;
+	text-shadow:
+	-.010em .010em #fff6e6,
+	-.040em .040em #e7dcd7;
 }
 .offset .title b
 {
 	display: block;
-    margin-top: -0.5em;
+	margin-top: -0.5em;
 }
 .offset .title_list
 {
@@ -95,8 +95,8 @@ body { background-color: #fff6e6; }
 	font-size: 3em;
 	line-height: 2em;
 	color:white;
-	background: rgb(134, 222, 216);}
-
+	background: rgb(134, 222, 216);
+}
 .item:before {
 	left: 100%;
 	top: 50%;
@@ -126,9 +126,9 @@ body { background-color: #fff6e6; }
 }
 .heart1
 {
-	    text-shadow: -5px 0 #FA5B6D , 0 5px #FA5B6D , 5px 0 #FA5B6D , 0 -5px #FA5B6D ;
-	    color: #FBF8F7;
-	    	font-size: 1.2em;
+	text-shadow: -5px 0 #FA5B6D , 0 5px #FA5B6D , 5px 0 #FA5B6D , 0 -5px #FA5B6D ;
+	color: #FBF8F7;
+	font-size: 1.2em;
 }
 .list
 {
@@ -161,4 +161,51 @@ svg
 	position: relative;
 	height: 10px;
 	top: 8px;
+}
+.breadcrumb { 
+	list-style: none; 
+	overflow: hidden; 
+	font: 18px Helvetica, Arial, Sans-Serif;
+}
+.breadcrumb li { 
+	float: left; 
+}
+.breadcrumb li a {
+	color: white;
+	text-decoration: none; 
+	padding: 10px 0 10px 65px;
+	background: gray;                   /* fallback color */
+	background: hsla(34,85%,35%,1); 
+	position: relative; 
+	display: block;
+	float: left;
+}
+.breadcrumb li a:after { 
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid hsla(34,85%,35%,1);
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	left: 100%;
+	z-index: 2; 
+}
+.breadcrumb li a:before { 
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;       
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid white;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	margin-left: 1px;
+	left: 100%;
+	z-index: 1; 
 }

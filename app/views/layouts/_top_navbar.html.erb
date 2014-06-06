@@ -17,7 +17,7 @@
         <li class="has-dropdown"><a href="#"><i class="fa fa-globe fa-lg"></i> <%= I18n.locale %></a>
           <ul class="dropdown">
             <% Locale.supported_languages.each do |locale| %>
-              <li><%= link_to I18n.name_for_locale(locale), (request.get? ? url_for(locale: locale) : root_path(locale: locale)) %></li>
+            <li><%= link_to I18n.name_for_locale(locale), (request.get? ? url_for(locale: locale) : root_path(locale: locale)) %></li>
             <% end %>
           </ul>
         </li>
@@ -30,8 +30,8 @@
         <li><a href="<%= root_path %>">Moje zakupy</a></li>
         <li class="divider"></li>
         <% if user_signed_in? %>
-          <!-- user is signed in -->
-          <%= menu_items(
+        <!-- user is signed in -->
+        <%= menu_items(
             # My account
             { name: t('layouts.application.words.my_account'),
               icon: 'fa-wrench',
@@ -50,24 +50,25 @@
             { name: t('layouts.application.words.sign_out'),
               path: destroy_user_session_path,
               method: :delete }
-          ) %>
-        <% else %>
-          <!-- user is signed out -->
-          <li class="has-dropdown"><a href="#"><span id="sign-in-icon-container"></span><%= t('layouts.application.words.sign_in') %></a>
-            <ul class="dropdown">
-              <li><%= link_to raw(%{<i class="fa fa-facebook-square"></i> #{t('layouts.application.sign_up_modal.sign_in_via_facebook')}}), user_omniauth_authorize_path(:facebook), data: { 'load-icon' => '#sign-in-icon-container', 'load-icon-margin' => 'right:10px' } %></li>
-              <li><%= link_to raw(%{<i class="fa fa-envelope"></i> #{t('layouts.application.words.sign_in_via_email')}}), new_user_session_path %></li>
+              ) %>
+              <% else %>
+              <!-- user is signed out -->
+              <li class="has-dropdown"><a href="#"><span id="sign-in-icon-container"></span><%= t('layouts.application.words.sign_in') %></a>
+                <ul class="dropdown">
+                  <li><%= link_to raw(%{<i class="fa fa-facebook-square"></i> #{t('layouts.application.sign_up_modal.sign_in_via_facebook')}}), user_omniauth_authorize_path(:facebook), data: { 'load-icon' => '#sign-in-icon-container', 'load-icon-margin' => 'right:10px' } %></li>
+                  <li><%= link_to raw(%{<i class="fa fa-envelope"></i> #{t('layouts.application.words.sign_in_via_email')}}), new_user_session_path %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to raw(%{<i class="fa fa-key"></i> #{t("devise.passwords.new.forgot_your_password")}}), new_user_password_path %></li>
+                </ul>
+              </li>
               <li class="divider"></li>
-              <li><%= link_to raw(%{<i class="fa fa-key"></i> #{t("devise.passwords.new.forgot_your_password")}}), new_user_password_path %></li>
+              <li class="has-form">
+                <%= link_to raw(%{#{t('layouts.application.words.sign_up')}}), '#', class: 'button', data: { 'reveal-id' => 'signUpModal' } %>
+              </li>
+              <% end %>
             </ul>
-          </li>
-          <li class="divider"></li>
-          <li class="has-form">
-            <%= link_to raw(%{#{t('layouts.application.words.sign_up')}}), '#', class: 'button', data: { 'reveal-id' => 'signUpModal' } %>
-          </li>
-        <% end %>
-      </ul>
-    </section>
-  </nav>
-  <div class='nav_border'
-</div>
+          </section>
+        </nav>
+        <div class='nav_border'
+      </div>
+      

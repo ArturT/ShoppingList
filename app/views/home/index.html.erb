@@ -1,10 +1,10 @@
 <div class="section1">
 	<div class="row">
 		<div class="offset large-12 columns">
-  			<h1 class="title">
-    			<em>Czeklista</em>
-    			<b>Zrób wspaniałe zakupy</b>
-  			</h1>
+			<h1 class="title">
+				<em>Czeklista</em>
+				<b>Zrób wspaniałe zakupy</b>
+			</h1>
 		</div>
 	</div>
 </div>
@@ -15,16 +15,50 @@ UI VIEW
 <div class="section2">
 	<div class="row">
 		<div class="offset title_list large-10 columns">
-  			<h5 class="title title_list">
-    			<em>Zakupy dla psa</em>
-  			</h5>
+			<h5 class="title title_list">
+				<em>Zakupy dla psa</em>
+			</h5>
+		</div>
+	</div>
+
+
+	<ul class="breadcrumb">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Vehicles</a></li>
+		<li><a href="#">Vans</a></li>
+		<li><a href="#">Camper Vans</a></li>
+		<li><a href="#">1989 VW Westfalia Vanagon</a></li>
+	</ul>
+
+
+
+
+
+
+
+
+
+
+	
+	<div class="tabs-content">
+		<div class="content active" id="panel2-1">
+			<p>First panel content goes here...</p>
+		</div>
+		<div class="content" id="panel2-2">
+			<p>Second panel content goes here...</p>
+		</div>
+		<div class="content" id="panel2-3">
+			<p>Third panel content goes here...</p>
+		</div>
+		<div class="content" id="panel2-4">
+			<p>Fourth panel content goes here...</p>
 		</div>
 	</div>
 	<div class="row">
 		<div class="item large-8 columns">
 			<div class="item_name large-6 columns">Cebula</div>
 			<div class="large-2 columns heart">
-			<%= image_tag 'koszyk1.png'%>
+				<%= image_tag 'koszyk1.png'%>
 			</div>
 		</div>
 	</div>
@@ -32,26 +66,28 @@ UI VIEW
 		<div class="item large-8 columns">
 			<div class="item_name large-6 columns">Pomidory</div>
 			<div class="large-2 columns heart">
-			<svg version="1.1" id="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 		width="50px" height="50px" viewBox="0 0 299 252" enable-background="new 0 0 299 252" xml:space="preserve">
-			<path fill="#FA5B6D"  d="M248.078,5.883c-36.691-14.739-77.771-0.839-98.517,31.125C128.817,5.044,87.735-8.856,51.043,5.883
-			C9.354,22.632-10.863,70.009,5.887,111.696c16.06,39.98,143.314,139.607,143.314,139.607l0.359,0.28l0.36-0.28
-			c0,0,127.251-99.627,143.314-139.607C309.986,70.009,289.768,22.632,248.078,5.883z"/>
+				<svg version="1.1" id="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				width="50px" height="50px" viewBox="0 0 299 252" enable-background="new 0 0 299 252" xml:space="preserve">
+				<path fill="#FA5B6D"  d="M248.078,5.883c-36.691-14.739-77.771-0.839-98.517,31.125C128.817,5.044,87.735-8.856,51.043,5.883
+				C9.354,22.632-10.863,70.009,5.887,111.696c16.06,39.98,143.314,139.607,143.314,139.607l0.359,0.28l0.36-0.28
+				c0,0,127.251-99.627,143.314-139.607C309.986,70.009,289.768,22.632,248.078,5.883z"/>
 			</svg>
-			</div>
-		</div>
-	</div>
-		<div class="row">
-		<div class="item large-8 columns">
-			<div class="item_name large-6 columns">Cebula</div>
-			<div class="large-2 columns heart">
-			<svg version="1.1" id="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 		width="50px" height="50px" viewBox="0 0 299 252" enable-background="new 0 0 299 252" xml:space="preserve">
-			<path fill="transparent" stroke="#FA5B6D" stroke-width="8" d="M248.078,5.883c-36.691-14.739-77.771-0.839-98.517,31.125C128.817,5.044,87.735-8.856,51.043,5.883
-			C9.354,22.632-10.863,70.009,5.887,111.696c16.06,39.98,143.314,139.607,143.314,139.607l0.359,0.28l0.36-0.28
-			c0,0,127.251-99.627,143.314-139.607C309.986,70.009,289.768,22.632,248.078,5.883z"/>
-			</svg>
-			</div>
 		</div>
 	</div>
 </div>
+<div class="row">
+	<div class="item large-8 columns">
+		<div class="item_name large-6 columns">Cebula</div>
+		<div class="large-2 columns heart">
+			<svg version="1.1" id="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			width="50px" height="50px" viewBox="0 0 299 252" enable-background="new 0 0 299 252" xml:space="preserve">
+			<path fill="transparent" stroke="#FA5B6D" stroke-width="8" d="M248.078,5.883c-36.691-14.739-77.771-0.839-98.517,31.125C128.817,5.044,87.735-8.856,51.043,5.883
+			C9.354,22.632-10.863,70.009,5.887,111.696c16.06,39.98,143.314,139.607,143.314,139.607l0.359,0.28l0.36-0.28
+			c0,0,127.251-99.627,143.314-139.607C309.986,70.009,289.768,22.632,248.078,5.883z"/>
+		</svg>
+	</div>
+</div>
+<div ng-controller="ListsController">
+	{{lists}}
+</div>
+
