@@ -12,6 +12,9 @@ env:
     - COVERAGE_REPORTS=shippable/codecoverage
     - SIMPLECOV=1
     - SIMPLECOV_CSV=1
+    - COVERALLS=1
+    # COVERALLS_REPO_TOKEN should be secure
+    - secure: lJF/0qVCuf6FxcHnaIJDnBi7ARnJqSl/ZyJKnQp5J1cnipBODsmTlsOPZzlALQTCfNgYpf5DDVrcKeBxAvkl5YmeJPLxmXlwxBafcxxHFas0683wnuFXAKNuZKoUSOVaLu9Sg+Y1zOkVpyGOWENwDk4HdYOR3VPgRr4S9PoeoDuvw5St2ktng4+ZZRH/JvIkTk76cxXGMW0YXnsODEwUiou/xWB8tDM62bgBzoP82ij6ANUIsw/q/aBzk5wiDKfCF46/o3CYEfCuFtbeIMQtufQjvoQlKq8WkGNkmLusIYFeeKcsSpZ7mnFnuM6y3OCTR5h1NgNJ1x9mNL0wppAdfA==
 services:
   - redis
 before_install:
