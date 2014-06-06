@@ -148,6 +148,13 @@ box-shadow:         -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rg
 {
 	padding-top:5px;
 }
+.remove
+{
+  color: gray;
+  font-size: 0.8em;
+  padding-left: 10px;
+  cursor: pointer;
+}
 .koszyk
 {
 	height: 50px;
