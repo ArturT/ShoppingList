@@ -1,7 +1,7 @@
 angular.module('App').config ($stateProvider, $urlRouterProvider) ->
-  $urlRouterProvider.otherwise "/"
-  $stateProvider.state("search",
-    url: "/"
+  $urlRouterProvider.otherwise "/lists"
+  $stateProvider.state("lists",
+    url: "/lists"
     templateUrl: "templates/shopping_lists.html"
     controller: "ListsController"
   )

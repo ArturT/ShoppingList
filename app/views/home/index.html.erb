@@ -1,10 +1,16 @@
-<div class="row">
-  <div class="offset large-12 columns">
-    <h1 class="title">
-      <em>Czeklista</em>
-      <b>Zrób wspaniałe zakupy</b>
-    </h1>
+<% if user_signed_in? %>
+  <div ui-view></div>
+<% else %>
+  <div class="row">
+    <div class="offset large-12 columns">
+      <h1 class="title">
+        <em>Czeklista</em>
+        <b>Zrób wspaniałe zakupy</b>
+        <br>
+        <%= link_to raw(%{<i class="fa fa-facebook-square fa-lg"></i> #{t('layouts.application.sign_up_modal.sign_in_via_facebook')}}), user_omniauth_authorize_path(:facebook), class: 'button', data: { 'load-icon' => 'append', 'load-icon-size' => 'fa-lg', 'load-icon-margin' => 'left:15px' } %>
+        <br>
+        <%= link_to raw(%{#{t('layouts.application.sign_up_modal.registration_form')} <i class="fa fa-sign-in"></i>}), new_user_registration_path(), class: 'secondary' %>
+      </h1>
+    </div>
   </div>
-</div>
-<div ui-view></div>
-
+<% end %>
