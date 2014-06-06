@@ -36,7 +36,7 @@ ShoppingList::Application.routes.draw do
 
   namespace :api do
     namespace :internal do
-      resources :lists, only: [:index, :create, :update, :destroy]
+      resources :lists, only: [:index, :create, :update, :destroy, :show]
       resources :items, only: [:index, :create, :update, :destroy]
       resources :list_items, only: [:index, :create, :update, :destroy]
     end

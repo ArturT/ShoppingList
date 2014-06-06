@@ -5,14 +5,13 @@
       </h2>
   </div>
 </div>
-<div>
-  <p>add new list</p>
-  <input type="text" ng-model="newList"</input>
+<div class="form">
+  <input placeholder="add new list" type="text" ng-model="newList"</input>
   <button ng-click="addList()">Add me</button>
 </div>
 <div class="row" ng-repeat="list in lists">
   <div class="list large-8 columns">
-    <div class="list_name large-6 columns">{{list.name}}<span class="remove"  ng-click="remove(list.id)">remove</span></div>
+    <div class="list_name large-6 columns"><a href="<%= params[:locale]%>#/lists/{{list.id}}">{{list.name}}</a><span class="remove"  ng-click="remove(list.id)">remove</span></div>
     <div class="large-2 columns heart"><svg version="1.1" id="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     width="50px" height="50px" viewBox="0 0 299 252" enable-background="new 0 0 299 252" xml:space="preserve">
     <path fill="#FA5B6D"  d="M248.078,5.883c-36.691-14.739-77.771-0.839-98.517,31.125C128.817,5.044,87.735-8.856,51.043,5.883

@@ -1,3 +1,4 @@
 angular.module('App.controllers').controller 'ListController', ($scope, Restangular, $stateParams) ->
-  $scope.list = Restangular.all('list/' + $stateParams.id).getList().$object
+  baseList = Restangular.all('lists')
+  $scope.list = baseList.one($stateParams.id).get().$object
 

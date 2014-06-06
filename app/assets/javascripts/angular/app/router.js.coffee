@@ -6,7 +6,7 @@ angular.module('App').config ($stateProvider, $urlRouterProvider) ->
     controller: "ListsController"
   )
   .state("list",
-    url: "/list/:id"
+    url: "/lists/:id"
     templateUrl: "templates/shopping_list.html"
     controller: "ListController"
   )

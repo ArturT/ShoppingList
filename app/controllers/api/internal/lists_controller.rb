@@ -29,6 +29,10 @@ class Api::Internal::ListsController < ApplicationController
     render json: {}
   end
 
+  def show
+    render json: {}
+  end
+
   private
 
   def list_params
