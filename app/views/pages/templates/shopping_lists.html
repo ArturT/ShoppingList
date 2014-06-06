@@ -5,6 +5,13 @@
       </h2>
   </div>
 </div>
+
+<div>
+  <p>add new list</p>
+  <input type="text" ng-model="newList"</input>
+  <button ng-click="addList()">Add me</button>
+</div>
+
 <div class="row" ng-repeat="list in lists">
   <div class="list large-8 columns">
     <div class="list_name large-6 columns">{{list.name}}</div>

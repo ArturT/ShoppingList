@@ -1,2 +1,9 @@
 angular.module('App.controllers').controller 'ListsController', ($scope, Restangular) ->
-  $scope.lists = Restangular.all('lists').getList().$object
+  baseLists = Restangular.all('lists')
+  $scope.lists = baseLists.getList().$object
+
+  $scope.addList = ->
+    list = {name: $scope.newList}
+    baseLists.post(list).then((data) ->
+      $scope.lists.push(data))
+
