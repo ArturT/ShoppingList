@@ -7,4 +7,12 @@ class List < ActiveRecord::Base
   validates :name,
     presence: true,
     uniqueness: { scope: [:user_id] }
+
+  def bought_items
+    list_items.where(bought: true).map(&:item)
+  end
+
+  def items_to_buy
+    list_items.where(bought: false).map(&:item)
+  end
 end
