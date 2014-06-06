@@ -19,45 +19,28 @@ Spork.prefork do
 
   if ENV['SIMPLECOV']
     require 'simplecov'
-    if ENV['RCOV']
-      require 'simplecov-rcov'
+    require 'simplecov-rcov'
+    require 'simplecov-csv'
 
-      SimpleCov.start 'rails' do
-        add_group 'Decorators', 'app/decorators'
-        add_group 'Presenters', 'app/presenters'
-        add_group 'Repositories', 'app/repositories'
-        add_group 'Services', 'app/services'
-        add_group 'Uploaders', 'app/uploaders'
-        add_group 'Validators', 'app/validators'
-        add_group 'Workers', 'app/workers'
-        add_filter 'app/admin'
+    class SimpleCov::Formatter::MergedFormatter
+      def format(result)
+        SimpleCov::Formatter::HTMLFormatter.new.format(result)
+        SimpleCov::Formatter::RcovFormatter.new.format(result)
+        SimpleCov::Formatter::CSVFormatter.new.format(result)
       end
+    end
 
-      class SimpleCov::Formatter::MergedFormatter
-        def format(result)
-          SimpleCov::Formatter::HTMLFormatter.new.format(result)
-          SimpleCov::Formatter::RcovFormatter.new.format(result)
-        end
-      end
-
-      SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
-      SimpleCov.coverage_dir('coverage')
-    elsif ENV['SIMPLECOV_CSV']
-      require 'simplecov-csv'
-      SimpleCov.formatter = SimpleCov::Formatter::CSVFormatter
-      SimpleCov.coverage_dir(ENV['COVERAGE_REPORTS'])
-      SimpleCov.start 'rails' do
-        add_group 'Decorators', 'app/decorators'
-        add_group 'Presenters', 'app/presenters'
-        add_group 'Repositories', 'app/repositories'
-        add_group 'Services', 'app/services'
-        add_group 'Uploaders', 'app/uploaders'
-        add_group 'Validators', 'app/validators'
-        add_group 'Workers', 'app/workers'
-        add_filter 'app/admin'
-      end
-    else
-      SimpleCov.start
+    SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
+    SimpleCov.coverage_dir(ENV['COVERAGE_REPORTS'] || 'coverage')
+    SimpleCov.start 'rails' do
+      add_group 'Decorators', 'app/decorators'
+      add_group 'Presenters', 'app/presenters'
+      add_group 'Repositories', 'app/repositories'
+      add_group 'Services', 'app/services'
+      add_group 'Uploaders', 'app/uploaders'
+      add_group 'Validators', 'app/validators'
+      add_group 'Workers', 'app/workers'
+      add_filter 'app/admin'
     end
   end
 

@@ -215,7 +215,7 @@ To run mailcatcher in foreground:
 
 To generate a fresh code coverage report in `coverage` directory, run:
 
-    $ SIMPLECOV=1 RCOV=1 rspec spec
+    $ SIMPLECOV=1 rspec spec
 
 
 ## Tips
