@@ -14,7 +14,7 @@ env:
     - SIMPLECOV_CSV=1
     - COVERALLS=1
     # COVERALLS_REPO_TOKEN should be secure
-    - secure: lJF/0qVCuf6FxcHnaIJDnBi7ARnJqSl/ZyJKnQp5J1cnipBODsmTlsOPZzlALQTCfNgYpf5DDVrcKeBxAvkl5YmeJPLxmXlwxBafcxxHFas0683wnuFXAKNuZKoUSOVaLu9Sg+Y1zOkVpyGOWENwDk4HdYOR3VPgRr4S9PoeoDuvw5St2ktng4+ZZRH/JvIkTk76cxXGMW0YXnsODEwUiou/xWB8tDM62bgBzoP82ij6ANUIsw/q/aBzk5wiDKfCF46/o3CYEfCuFtbeIMQtufQjvoQlKq8WkGNkmLusIYFeeKcsSpZ7mnFnuM6y3OCTR5h1NgNJ1x9mNL0wppAdfA==
+    - secure: XhgWyyRPaTGpgheIzAInRy3DuqynPfEmXUc5CURqTh6DlSIba045FipC2zvXFaS/GUjO0nmyjrB0VlxDBIWnv2dnkTgn3I2zitt1E8MOzMxgZdRkl+uPXJOzmsH+733Xg+YXAobA+vhK/jDjhZyTKwlGWKX89hkVRmIuLLxkB8ep4mZRr9Y2R7fG54ka33WwAt+vLGcScv4sGKpCh8ImpakyJ4euFM3wMZc+XwH47YrXR4/uoSPYK7Tc525War0ea2rv7OshoI+ipDpfDYNcZpJbIO8Mhljj0jUMyZz0Gk6uHBvnL2Majmkax5mf3HV4pRdP/Yl0hDGpmbYc5orGaA==
 services:
   - redis
 before_install:
