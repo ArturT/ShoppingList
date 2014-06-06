@@ -32,7 +32,6 @@ script:
   - rake ci:setup:rspecdoc spec
   - bundle exec rake spec:javascript
 after_success:
-  - bundle exec coveralls push
   - ./script/ci_deploy.sh
 notifications:
   email: false
