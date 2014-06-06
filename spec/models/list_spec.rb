@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe List do
+  let(:list) { build(:list) }
+
+  it { expect(list).to be_valid }
+
   it { should have_many(:list_items) }
   it { should have_many(:items) }
 

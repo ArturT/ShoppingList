@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :list do
-    name 'List Name'
+    sequence(:name) { |n| "List #{n}" }
     user
   end
 end
