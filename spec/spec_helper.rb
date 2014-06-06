@@ -14,7 +14,7 @@ Spork.prefork do
 
   if ENV['COVERALLS']
     require 'coveralls'
-    Coveralls.wear!
+    Coveralls.wear!('rails')
   end
 
   if ENV['SIMPLECOV']
