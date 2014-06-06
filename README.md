@@ -94,7 +94,7 @@ Set your default metadata in `en.yml` and `pl.yml`:
     layouts:
       application:
         metadata:
-          title: 'Railstom'
+          title: 'ShoppingList'
           description: ''
           keywords: ''
 

@@ -46,7 +46,7 @@ en:
         email: 'email@example.com'
         password: '******'
       metadata:
-        title: 'Railstom'
+        title: 'ShoppingList'
         description: ''
         keywords: ''
       sign_up_modal:

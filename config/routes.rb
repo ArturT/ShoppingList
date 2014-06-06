@@ -1,4 +1,4 @@
-Railstom::Application.routes.draw do
+ShoppingList::Application.routes.draw do
   get '/' => 'home#locale_root'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

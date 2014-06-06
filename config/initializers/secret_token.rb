@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Railstom::Application.config.secret_key_base = Figaro.env.rails_secret_token
+ShoppingList::Application.config.secret_key_base = Figaro.env.rails_secret_token
