@@ -96,6 +96,9 @@ body { background-color: #fff6e6; }
 	line-height: 2em;
 	color:white;
 	background: rgb(134, 222, 216);
+		-webkit-box-shadow: -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
+	-moz-box-shadow:    -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
+	box-shadow:         -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
 }
 .item:before {
 	left: 100%;
@@ -141,7 +144,7 @@ body { background-color: #fff6e6; }
 	color:rgb(134, 222, 216);
 -webkit-box-shadow: -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
 -moz-box-shadow:    -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
-box-shadow:         -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);;
+box-shadow:         -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
 
 }
 .list_name
@@ -173,50 +176,45 @@ svg
 	height: 10px;
 	top: 8px;
 }
-.breadcrumb { 
-	list-style: none; 
-	overflow: hidden; 
-	font: 18px Helvetica, Arial, Sans-Serif;
+.tab
+{
+	border-radius:0px 20px 20px 20px !important;
+	background-color: #FDFBFB !important;
+	border-bottom: 4px solid rgb(134, 222, 216) !important;
+	border-left: 4px solid rgb(134, 222, 216) !important;
+	border-right: 4px solid rgb(134, 222, 216) !important;
+	border-top: 4px solid rgb(134, 222, 216) !important;
 }
-.breadcrumb li { 
-	float: left; 
+.small_menu
+{
+	border-radius:20px 20px 0px 0px !important;
+	background-color: rgb(134, 222, 216);
+	border: 4px solid rgb(134, 222, 216) !important;
+	font-family: "Josefin Sans";
+	font-size: 20px;
+	font-weight:200;
+	color: rgb(134, 222, 216) !important;
 }
-.breadcrumb li a {
-	color: white;
-	text-decoration: none; 
-	padding: 10px 0 10px 65px;
-	background: gray;                   /* fallback color */
-	background: hsla(34,85%,35%,1); 
-	position: relative; 
-	display: block;
-	float: left;
+.active .small_menu 
+{
+	border-radius:20px 20px 0px 0px !important;		
+	border-top: 4px solid rgb(134, 222, 216) !important;
+	border-bottom: none !important;
 }
-.breadcrumb li a:after { 
-	content: " "; 
-	display: block; 
-	width: 0; 
-	height: 0;
-	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
-	border-bottom: 50px solid transparent;
-	border-left: 30px solid hsla(34,85%,35%,1);
-	position: absolute;
-	top: 50%;
-	margin-top: -50px; 
-	left: 100%;
-	z-index: 2; 
+#section-container .active
+{
+	-webkit-box-shadow: -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
+	-moz-box-shadow:    -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
+	box-shadow:         -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
+	border-radius:20px !important;
 }
-.breadcrumb li a:before { 
-	content: " "; 
-	display: block; 
-	width: 0; 
-	height: 0;
-	border-top: 50px solid transparent;       
-	border-bottom: 50px solid transparent;
-	border-left: 30px solid white;
-	position: absolute;
-	top: 50%;
-	margin-top: -50px; 
-	margin-left: 1px;
-	left: 100%;
-	z-index: 1; 
+#section-container .small_menu
+{
+	border-radius:20px 20px 0px 0px !important;
+	background-color: rgb(134, 222, 216);
+}
+#section-container .active .small_menu
+{
+	border-radius:20px 20px 0px 0px !important;
+	background-color: #FDFBFB !important;
 }
