@@ -1,0 +1,152 @@
+body
+{
+	background-color:rgba(237, 222, 217, 0.1) !important;
+}
+.contain-to-grid
+{
+	background-color: #FA5B6D;
+}
+.top-bar
+{
+	background-color: #FA5B6D;
+	height: 55px;
+	font-size: 1.2em;
+}
+.top-bar-section .has-form
+{
+	background-color: #FA5B6D;
+}
+.top-bar-section li a:not(.button)
+{
+	background-color: #FA5B6D;
+	line-height: 55px;
+	font-size: 1.2em;
+}
+.top-bar-section ul li > a.button
+{
+	background: rgb(134, 222, 216);
+	border: transparent;
+	font-size: 1.2em;
+}
+.top-bar-section ul
+{
+	background: transparent;
+}
+.divider
+{
+	border-right: solid 0.5px white !important;
+	border-left: solid 0.5px white !important;
+	color: white;
+}
+
+body { background-color: #fff6e6; }
+
+.offset {
+  margin-top: 5em;
+
+  text-rendering: optimizeLegibility;
+  & .title {
+    font-family: "Lobster Two", "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-size: 3em;
+    color: rgb(134, 222, 216);
+    text-align: center;
+    & em {
+      font-weight: 100;
+      font-style: normal;
+      font-size: 2.5em;
+      letter-spacing: -0.01em;
+      color: #f77683;
+      text-shadow:
+        -.010em .010em #fff6e6,
+        -.040em .040em #e7dcd7;
+    }
+    & b {
+      display: block;
+      margin-top: -0.5em;
+    }
+  }
+}
+.offset .title_list
+{
+	text-align: left !important;
+	font-size: 2.2em !important;
+
+}
+.section1
+{
+	min-height:650px;
+	border-bottom: solid gray 1px;
+}
+.section3
+{
+	min-height:650px;
+	border-bottom: solid gray 1px;
+}
+.item
+{
+	border: 0.08em solid rgb(134, 222, 216);
+	margin: 0.5em;
+	font-family: "Josefin Sans";
+	font-size: 3em;
+	line-height: 2em;
+	color:white;
+	background: rgb(134, 222, 216);}
+
+.item:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 2.1em;
+	width: 1em;
+	position: absolute;
+	pointer-events: none;
+}
+.item:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-left-color: rgb(134, 222, 216);;
+	border-width: 52px;
+	margin-top: -52px;
+	margin-left: 3px;
+}
+
+.item_name
+{
+	padding-left:1.5em;
+}
+.heart
+{
+	font-family: "Lobster Two";
+	font-size: 1.2em;
+}
+.heart1
+{
+	    text-shadow: -5px 0 #FA5B6D , 0 5px #FA5B6D , 5px 0 #FA5B6D , 0 -5px #FA5B6D ;
+	    color: #FBF8F7;
+	    	font-size: 1.2em;
+}
+.list
+{
+	border: 4px solid rgb(134, 222, 216);
+	margin: 0.5em;
+	font-family: "Josefin Sans";
+	font-size: 1.9em;
+	line-height: 2.5em;
+	border-radius: 20px;
+	color:rgb(134, 222, 216);
+}
+.list_name
+{
+	padding-top:5px;
+}
+.koszyk
+{
+	height: 50px;
+	margin-top:5px;
+	margin-right:10px;
+}
+svg
+{
+	margin-top: 15px;
+}

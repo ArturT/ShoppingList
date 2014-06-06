@@ -3,7 +3,11 @@
     <ul class="title-area">
       <!-- Title Area -->
       <li class="name">
+
         <h1><a href="<%= root_path %>"><i class="fa fa-shopping-cart"></i> ShoppingList</a></h1>
+
+        <h1><a href="<%= root_path %>"><%= image_tag 'koszyk1.png', :class => 'koszyk'%></a></h1>
+
       </li>
       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span><%= t('layouts.application.words.menu') %></span></a></li>
@@ -25,6 +29,8 @@
 
       <!-- Right Nav Section -->
       <ul class="right">
+        <li class="divider"></li>
+        <li><a href="<%= root_path %>">Moje zakupy</a></li>
         <li class="divider"></li>
         <% if user_signed_in? %>
           <!-- user is signed in -->
@@ -60,7 +66,7 @@
           </li>
           <li class="divider"></li>
           <li class="has-form">
-            <%= link_to raw(%{#{t('layouts.application.words.sign_up')} <i class="fa fa-sign-in"></i>}), '#', class: 'button', data: { 'reveal-id' => 'signUpModal' } %>
+            <%= link_to raw(%{#{t('layouts.application.words.sign_up')}}), '#', class: 'button', data: { 'reveal-id' => 'signUpModal' } %>
           </li>
         <% end %>
       </ul>
