@@ -5,3 +5,8 @@ angular.module('App').config ($stateProvider, $urlRouterProvider) ->
     templateUrl: "templates/shopping_lists.html"
     controller: "ListsController"
   )
+  .state("list",
+    url: "/list/:id"
+    templateUrl: "templates/shopping_list.html"
+    controller: "ListController"
+  )
