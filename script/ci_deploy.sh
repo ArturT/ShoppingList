@@ -4,7 +4,8 @@ if [ "$BRANCH" = "master" ]; then
   cap staging deploy:migrate
 elif [ "$BRANCH" = "production" ]; then
   echo "deploying production"
-  echo "done nothing"
+  cap production deploy
+  cap production deploy:migrate
 else
   echo "No deployment for branch: $BRANCH"
 fi

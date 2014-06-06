@@ -31,8 +31,8 @@ before_script:
 script:
   - rake ci:setup:rspecdoc spec
   - bundle exec rake spec:javascript
-#after_success:
-  #- ./script/ci_deploy.sh
+after_success:
+  - ./script/ci_deploy.sh
 notifications:
   email: false
     #recipients:

@@ -8,6 +8,18 @@
 Simple shopping list.
 
 
+## Demo and production
+
+* Demo [http://shoppinglist-staging.weresu.me](http://shoppinglist-staging.weresu.me)
+* Production [http://shoppinglist.weresu.me](http://shoppinglist.weresu.me)
+
+## Auto deploy
+
+If tests pass on [Shippable.com](https://shippable.com) then:
+
+* `master` branch will be deploy to staging,
+* `production` branch will be deploy to production.
+
 
 # App configuration
 
