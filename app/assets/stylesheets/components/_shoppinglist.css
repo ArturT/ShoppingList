@@ -139,6 +139,10 @@ body { background-color: #fff6e6; }
 	line-height: 2.5em;
 	border-radius: 20px;
 	color:rgb(134, 222, 216);
+-webkit-box-shadow: -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
+-moz-box-shadow:    -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);
+box-shadow:         -3px 1px 0px 0px rgba(255, 246, 230, 1), -5px 5px 0px 0px rgba(231, 220, 215, 1);;
+
 }
 .list_name
 {
