@@ -2,7 +2,7 @@
 angular.module('App.directives.railstom', [])
 
 # Your custom modules
-angular.module('App.controllers', ['restangular'])
+angular.module('App.controllers', [])
 angular.module('App.directives', [])
 angular.module('App.factories', [])
 angular.module('App.filters', [])
@@ -22,5 +22,7 @@ angular.module('App', [
 
   # Additional dependencies
   'ngResource',
-  'ng-rails-csrf'
+  'ng-rails-csrf',
+  'restangular',
+  'ui.router'
 ])
