@@ -4,29 +4,31 @@ body
 }
 .contain-to-grid
 {
-	background-color: #FA5B6D;
+	background-color: #FF647B;
 }
 .top-bar
 {
-	background-color: #FA5B6D;
+	background-color: #FF647B;
 	height: 55px;
 	font-size: 1.2em;
 }
 .top-bar-section .has-form
 {
-	background-color: #FA5B6D;
+	background-color: #FF647B;
 }
 .top-bar-section li a:not(.button)
 {
-	background-color: #FA5B6D;
+	background-color: #FF647B;
 	line-height: 55px;
 	font-size: 1.2em;
+	font-weight: 200;
 }
 .top-bar-section ul li > a.button
 {
 	background: rgb(134, 222, 216);
 	border: transparent;
 	font-size: 1.2em;
+	font-weight: 200;
 }
 .top-bar-section ul
 {
@@ -43,16 +45,19 @@ body { background-color: #fff6e6; }
 
 .offset {
   margin-top: 5em;
-
   text-rendering: optimizeLegibility;
-  & .title {
+}
+.offset .title
+{
     font-family: "Lobster Two", "Times New Roman", Times, serif;
     font-weight: 400;
     font-size: 3em;
     color: rgb(134, 222, 216);
     text-align: center;
-    & em {
-      font-weight: 100;
+}
+.offset .title em
+{
+	font-weight: 100;
       font-style: normal;
       font-size: 2.5em;
       letter-spacing: -0.01em;
@@ -60,12 +65,11 @@ body { background-color: #fff6e6; }
       text-shadow:
         -.010em .010em #fff6e6,
         -.040em .040em #e7dcd7;
-    }
-    & b {
-      display: block;
-      margin-top: -0.5em;
-    }
-  }
+}
+.offset .title b
+{
+	display: block;
+    margin-top: -0.5em;
 }
 .offset .title_list
 {
@@ -149,4 +153,12 @@ body { background-color: #fff6e6; }
 svg
 {
 	margin-top: 15px;
+}
+.nav_border
+{
+	background: url(/assets/border.png) center repeat-x;
+	background-size: 18px;
+	position: relative;
+	height: 10px;
+	top: 8px;
 }
